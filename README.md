@@ -17,3 +17,47 @@ Empresas de aluguel de veículos que oferecem carros para motoristas de aplicati
 - PostgreSQL
 - SQL
 - GitHub
+## Modelo de Dados
+
+```mermaid
+erDiagram
+
+PESSOAS {
+    int id
+    string cpf
+    string nome
+    string sobrenome
+    string endereco
+    string email
+    string dados_bancarios
+    string telefone
+    string sexo
+    date data_nascimento
+    string tipo
+}
+
+VEICULOS {
+    int id
+    string placa
+    string marca
+    string modelo
+    int ano
+    string cor
+    string tipo
+}
+
+CONTRATOS {
+    int id
+    string numero_contrato
+    date data_contrato
+    string tipo_pagamento
+    date data_inicio
+    date data_fim
+    decimal valor
+    int cliente_id
+    int veiculo_id
+}
+
+PESSOAS ||--o{ CONTRATOS : faz
+VEICULOS ||--o{ CONTRATOS : alugado
+```
