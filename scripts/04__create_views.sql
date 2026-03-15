@@ -5,6 +5,7 @@ SELECT
     COUNT(*) AS total_contratos
 FROM contratos
 GROUP BY data_contrato;
+-- pode consultar assim: SELECT * FROM vw_total_contratos_por_dia;
 
 -- view desnormalizada
 CREATE OR REPLACE VIEW vw_contratos_detalhados AS
@@ -15,3 +16,4 @@ SELECT
 FROM contratos c
 JOIN pessoas p ON c.id_pessoa = p.id
 JOIN veiculos v ON c.id_veiculo = v.id;
+-- pode consultar assim: SELECT * FROM vw_contratos_detalhados;
