@@ -135,3 +135,19 @@ PESSOAS ||--o{ CLIENTE_CONQUISTA : ganha
 
 CONQUISTAS ||--o{ CLIENTE_CONQUISTA : registra
 ```
+## Protótipo da Interface
+
+O protótipo da interface do sistema foi gerado utilizando IA para criação de interfaces modernas.
+
+Telas implementadas:
+
+- Login
+- Dashboard (tela principal)
+- Gerenciamento de pessoas
+- Gerenciamento de veículos
+- Gerenciamento de Contratos
+- Ranking de Clientes (Gamificação)
+
+As imagens das telas podem ser encontradas na pasta:
+
+interface/
