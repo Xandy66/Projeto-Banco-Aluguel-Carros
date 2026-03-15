@@ -79,3 +79,59 @@ A ideia é incentivar os clientes a utilizarem mais o sistema de aluguel de veí
 - Ao realizar um aluguel, o cliente ganha pontos
 - Ao acumular pontos suficientes, o cliente sobe de nível
 - Após certo número de alugueis, o cliente desbloqueia conquistas
+
+## Modelo de Dados (ER Diagram)
+
+```mermaid
+erDiagram
+
+PESSOAS {
+    int id
+    varchar nome
+    varchar cpf
+}
+
+VEICULOS {
+    int id
+    varchar modelo
+    varchar placa
+}
+
+CONTRATOS {
+    int id
+    int pessoa_id
+    int veiculo_id
+    date data_inicio
+}
+
+PONTUACAO_CLIENTE {
+    int id
+    int pessoa_id
+    int pontos
+}
+
+NIVEL_CLIENTE {
+    int id
+    varchar nome
+    int pontos_minimos
+}
+
+CONQUISTAS {
+    int id
+    varchar nome
+}
+
+CLIENTE_CONQUISTA {
+    int id
+    int pessoa_id
+    int conquista_id
+}
+
+PESSOAS ||--o{ CONTRATOS : faz
+VEICULOS ||--o{ CONTRATOS : alugado
+
+PESSOAS ||--|| PONTUACAO_CLIENTE : possui
+PESSOAS ||--o{ CLIENTE_CONQUISTA : ganha
+
+CONQUISTAS ||--o{ CLIENTE_CONQUISTA : registra
+```
