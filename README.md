@@ -61,3 +61,21 @@ CONTRATOS {
 PESSOAS ||--o{ CONTRATOS : faz
 VEICULOS ||--o{ CONTRATOS : alugado
 ```
+## Inovação do Projeto
+
+Para tornar o sistema mais atrativo, foi implementado um sistema de **gamificação**.
+
+A ideia é incentivar os clientes a utilizarem mais o sistema de aluguel de veículos através de recompensas virtuais.
+
+### Funcionalidades de Gamificação
+
+- Sistema de **pontuação** para cada aluguel realizado
+- **Níveis de cliente** baseados na quantidade de pontos
+- **Conquistas** liberadas conforme o cliente utiliza o sistema
+- Possibilidade de criar **ranking de clientes**
+
+### Exemplo
+
+- Ao realizar um aluguel, o cliente ganha pontos
+- Ao acumular pontos suficientes, o cliente sobe de nível
+- Após certo número de alugueis, o cliente desbloqueia conquistas
