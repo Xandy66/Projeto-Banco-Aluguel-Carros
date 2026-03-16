@@ -1,7 +1,7 @@
 -- consulta por critério
 SELECT *
 FROM pessoas
-WHERE sexo = 'M';
+WHERE sexo = 'Feminino';
 
 -- contratos por dia
 SELECT data_contrato, COUNT(*) AS total_contratos
