@@ -79,22 +79,24 @@ VEICULOS ||--o{ CONTRATOS : "é utilizado em"
 ```
 ## Inovação do Projeto
 
-Para tornar o sistema mais atrativo, foi implementado um sistema de **gamificação**.
+Inovação: Sistema de Gamificação
 
-A ideia é incentivar os clientes a utilizarem mais o sistema de aluguel de veículos através de recompensas virtuais.
+O sistema implementa um mecanismo de gamificação para aumentar o engajamento dos clientes.
 
-### Funcionalidades de Gamificação
+Objetivo
+Incentivar os usuários a alugarem mais veículos através de recompensas.
 
-- Sistema de **pontuação** para cada aluguel realizado
-- **Níveis de cliente** baseados na quantidade de pontos
-- **Conquistas** liberadas conforme o cliente utiliza o sistema
-- Possibilidade de criar **ranking de clientes**
+Funcionalidades implementadas:
+- Sistema de pontos por aluguel
+- Níveis de cliente (bronze, prata, ouro, diamante)
+- Histórico de pontuação
+- Cashback baseado no nível
+- Evolução automática de nível
 
-### Exemplo
-
-- Ao realizar um aluguel, o cliente ganha pontos
-- Ao acumular pontos suficientes, o cliente sobe de nível
-- Após certo número de alugueis, o cliente desbloqueia conquistas
+Benefícios:
+- Maior fidelização de clientes
+- Incentivo ao uso contínuo do sistema
+- Experiência mais interativa
 
 ## Modelo de Dados (ER Diagram)
 
