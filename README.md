@@ -23,7 +23,7 @@ Empresas de aluguel de veículos que oferecem carros para motoristas de aplicati
 erDiagram
 
 PESSOAS {
-    int id
+    int id PK
     string cpf
     string nome
     string sobrenome
@@ -33,33 +33,49 @@ PESSOAS {
     string telefone
     string sexo
     date data_nascimento
-    string tipo
+    boolean ativo
+    timestamp created_at
+    timestamp updated_at
 }
 
 VEICULOS {
-    int id
+    int id PK
     string placa
     string marca
     string modelo
     int ano
     string cor
     string tipo
+    decimal valor_dia
+    boolean disponivel
+    int km_atual
+    string observacoes
+    timestamp created_at
+    timestamp updated_at
 }
 
 CONTRATOS {
-    int id
+    int id PK
     string numero_contrato
     date data_contrato
+    int cliente_id FK
+    int veiculo_id FK
     string tipo_pagamento
     date data_inicio
     date data_fim
-    decimal valor
-    int cliente_id
-    int veiculo_id
+    decimal valor_original
+    decimal desconto
+    decimal valor_final
+    string status
+    int km_inicial
+    int km_final
+    string observacoes
+    timestamp created_at
+    timestamp updated_at
 }
 
-PESSOAS ||--o{ CONTRATOS : faz
-VEICULOS ||--o{ CONTRATOS : alugado
+PESSOAS ||--o{ CONTRATOS : "realiza"
+VEICULOS ||--o{ CONTRATOS : "é utilizado em"
 ```
 ## Inovação do Projeto
 
