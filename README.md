@@ -101,55 +101,124 @@ A ideia é incentivar os clientes a utilizarem mais o sistema de aluguel de veí
 ```mermaid
 erDiagram
 
-PESSOAS {
-    int id
-    varchar nome
-    varchar cpf
-}
+    veiculos {
+        int id PK
+        string placa
+        string marca
+        string modelo
+        int ano
+        string cor
+        string tipo 
+        decimal valor_dia
+        boolean disponivel
+        int km_atual
+        text observacoes
+        timestamp created_at
+        timestamp updated_at
+    }
 
-VEICULOS {
-    int id
-    varchar modelo
-    varchar placa
-}
+    pessoas {
+        int id PK
+        string cpf
+        string nome
+        string sobrenome
+        text endereco
+        string email
+        text dados_bancarios
+        string telefone
+        string sexo
+        date data_nascimento
+        string tipo
+        boolean ativo
+        timestamp created_at
+        timestamp updated_at
+    }
 
-CONTRATOS {
-    int id
-    int pessoa_id
-    int veiculo_id
-    date data_inicio
-}
+    clientes {
+        int id PK
+        int pessoa_id FK
+        int pontos
+        string nivel
+        decimal gasto_mensal
+        decimal cashback_acumulado
+        date ultimo_contrato
+        int meses_sem_contrato
+        timestamp created_at
+        timestamp updated_at
+    }
 
-PONTUACAO_CLIENTE {
-    int id
-    int pessoa_id
-    int pontos
-}
+    contratos {
+        int id PK
+        string numero_contrato
+        date data_contrato
+        int cliente_id FK
+        int veiculo_id FK
+        string tipo_pagamento
+        date data_inicio
+        date data_fim
+        decimal valor_original
+        decimal desconto
+        decimal valor_final
+        string status
+        int km_inicial
+        int km_final
+        text observacoes
+        timestamp created_at
+        timestamp updated_at
+    }
 
-NIVEL_CLIENTE {
-    int id
-    varchar nome
-    int pontos_minimos
-}
+    pagamentos {
+        int id PK
+        int contrato_id FK
+        decimal valor
+        timestamp data_pagamento
+        string metodo_pagamento
+        string status
+        text comprovante_url
+        timestamp created_at
+    }
 
-CONQUISTAS {
-    int id
-    varchar nome
-}
+    historico_pontos {
+        int id PK
+        int cliente_id FK
+        int contrato_id FK
+        int pontos
+        string tipo
+        text descricao
+        timestamp created_at
+    }
 
-CLIENTE_CONQUISTA {
-    int id
-    int pessoa_id
-    int conquista_id
-}
+    manutencoes {
+        int id PK
+        int veiculo_id FK
+        string tipo
+        text descricao
+        decimal custo
+        date data_inicio
+        date data_fim
+        int km_manutencao
+        string status
+        timestamp created_at
+        timestamp updated_at
+    }
 
-PESSOAS ||--o{ CONTRATOS : faz
-VEICULOS ||--o{ CONTRATOS : alugado
+    configuracoes {
+        int id PK
+        string chave
+        string valor
+        text descricao
+        timestamp updated_at
+    }
 
-PESSOAS ||--|| PONTUACAO_CLIENTE : possui
-PESSOAS ||--o{ CLIENTE_CONQUISTA : ganha
+    %% RELACIONAMENTOS
 
-CONQUISTAS ||--o{ CLIENTE_CONQUISTA : registra
+    pessoas ||--|| clientes : "1:1"
+    clientes ||--o{ contratos : "1:N"
+    veiculos ||--o{ contratos : "1:N"
+    contratos ||--o{ pagamentos : "1:N"
+    clientes ||--o{ historico_pontos : "1:N"
+    contratos ||--o{ historico_pontos : "1:N"
+    veiculos ||--o{ manutencoes : "1:N"
 ```
 ## Protótipo da Interface
 
