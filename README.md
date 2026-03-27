@@ -6,7 +6,18 @@ Projeto de banco de dados para sistema de aluguel de carros
 Sistema de banco de dados para uma empresa de aluguel de carros.
 
 ## Objetivo
-O objetivo central deste projeto é desenvolver um ecossistema de banco de dados relacional robusto, utilizando PostgreSQL, projetado especificamente para as demandas de alta rotatividade do mercado de locação para motoristas de aplicativo.
+O objetivo deste projeto é desenvolver um banco de dados relacional utilizando PostgreSQL para gerenciar de forma eficiente uma empresa de aluguel de veículos. O sistema será responsável por organizar e controlar informações essenciais, como clientes, atendentes, veículos disponíveis e contratos de locação.
+
+A proposta do sistema é atender principalmente motoristas de aplicativos, que necessitam de veículos para trabalhar, oferecendo uma solução prática e organizada para o gerenciamento desses alugueis. Além disso, o sistema também atende pessoas comuns que, por diversos motivos, precisam alugar um carro temporariamente — seja por estarem sem veículo próprio, em viagem ou por conveniência.
+
+Com isso, o sistema permitirá:
+
+O cadastro e gerenciamento de clientes e atendentes
+O controle da frota de veículos disponíveis para locação
+O registro e acompanhamento de contratos de aluguel
+A organização das informações de forma segura, estruturada e escalável
+
+Dessa forma, o projeto busca simular um ambiente real de uma locadora de veículos, aplicando conceitos de modelagem de dados, normalização e boas práticas em banco de dados, além de facilitar futuras integrações com sistemas web ou aplicativos.
 
 Para alcançar uma gestão eficiente e escalável, o sistema foca nos seguintes pilares:
 
