@@ -1,13 +1,15 @@
 CREATE TABLE IF NOT EXISTS pessoas (
     id SERIAL PRIMARY KEY,
-    cpf VARCHAR(11) UNIQUE NOT NULL,
+    cpf VARCHAR(14) UNIQUE NOT NULL,
     nome VARCHAR(100) NOT NULL,
     sobrenome VARCHAR(100) NOT NULL,
     endereco TEXT,
-    email VARCHAR(150) UNIQUE,
+    email VARCHAR(255) UNIQUE NOT NULL,
     dados_bancarios TEXT,
     telefone VARCHAR(20),
-    sexo VARCHAR(10),
+    sexo sexo_tipo,
     data_nascimento DATE,
-    tipo VARCHAR(20)
+    ativo BOOLEAN DEFAULT true,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
