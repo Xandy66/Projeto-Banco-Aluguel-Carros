@@ -3,7 +3,9 @@ Projeto de banco de dados para sistema de aluguel de carros
 # Sistema de Aluguel de Carros
 
 ## Tema
-Sistema de banco de dados para uma empresa de aluguel de carros.
+Engenharia de Dados para Ecossistema de Mobilidade e Locação de Veículos.
+
+O projeto consiste na arquitetura e implementação de um banco de dados relacional robusto, desenvolvido em PostgreSQL. O sistema foi projetado para sustentar uma operação completa de locadora de veículos, integrando a gestão de ativos (frota), o ciclo de vida de contratos de locação, o fluxo financeiro de pagamentos e uma camada inovadora de inteligência de fidelização através de Gamificação.
 
 ## Objetivo
 O objetivo deste projeto é desenvolver um banco de dados relacional utilizando PostgreSQL para gerenciar de forma eficiente uma empresa de aluguel de veículos. O sistema será responsável por organizar e controlar informações essenciais, como clientes, atendentes, veículos disponíveis e contratos de locação.
@@ -39,7 +41,13 @@ Auditabilidade: Manter um registro histórico preciso (via campos de created_at 
 O sistema permitirá controlar os veículos disponíveis, registrar clientes e gerenciar os contratos de locação.
 
 ## Público-Alvo
-Empresas de aluguel de veículos que oferecem carros para motoristas de aplicativos como Uber, 99 e InDrive.
+O sistema foi desenvolvido para atender:
+
+Locadoras de Veículos Especializadas: Empresas focadas no segmento de B2C (Business to Consumer) que buscam automação no controle de frota e contratos.
+
+Gestores de Frota para Mobilidade Urbana: Operadores que disponibilizam veículos especificamente para motoristas de aplicativos (Uber, 99, InDrive), onde o controle de quilometragem e manutenção preventiva é crítico.
+
+Desenvolvedores e Arquitetos de Software: Profissionais que buscam uma referência de modelagem de dados que inclua regras de negócio complexas, como sistemas de pontos, níveis de recompensa (Loyalty Program) e integridade referencial.
 
 ## Tecnologias Utilizadas
 - PostgreSQL
