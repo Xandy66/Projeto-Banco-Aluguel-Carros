@@ -21,25 +21,6 @@ A organização das informações de forma segura, estruturada e escalável
 
 Dessa forma, o projeto busca simular um ambiente real de uma locadora de veículos, aplicando conceitos de modelagem de dados, normalização e boas práticas em banco de dados, além de facilitar futuras integrações com sistemas web ou aplicativos.
 
-Para alcançar uma gestão eficiente e escalável, o sistema foca nos seguintes pilares:
-
-1. Eficiência Operacional e Controle
-Gestão de Ativos: Monitorar o ciclo de vida dos veículos, incluindo disponibilidade em tempo real, controle de quilometragem e agendamento de manutenções preventivas e corretivas.
-
-Ciclo de Contratos: Automatizar o registro de locações, desde a abertura do contrato até a liquidação financeira e histórico de pagamentos.
-
-2. Fidelização e Engajamento (Diferencial Competitivo)
-Motor de Gamificação: Implementar uma estrutura lógica que transforme o comportamento de locação em benefícios tangíveis, gerindo pontuações, níveis de fidelidade (Bronze a Diamante) e cashback de forma automatizada.
-
-Análise de Perfil: Centralizar dados cadastrais e histórico de utilização para oferecer um atendimento personalizado e identificar clientes de alto valor.
-
-3. Integridade e Escalabilidade de Dados
-Arquitetura Relacional: Garantir a consistência das informações através de relacionamentos bem definidos entre tabelas de pessoas, veículos, contratos e financeiro.
-
-Auditabilidade: Manter um registro histórico preciso (via campos de created_at e updated_at) para facilitar auditorias e relatórios de desempenho mensal.
-
-O sistema permitirá controlar os veículos disponíveis, registrar clientes e gerenciar os contratos de locação.
-
 ## Público-Alvo
 O sistema foi desenvolvido para atender:
 
