@@ -1,0 +1,7 @@
+CREATE TABLE configuracoes (
+    id SERIAL PRIMARY KEY,
+    chave VARCHAR(100) UNIQUE NOT NULL,
+    valor TEXT NOT NULL,
+    descricao TEXT,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
